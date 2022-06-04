@@ -1,0 +1,17 @@
+version: '3'
+services:
+
+  py_build_exe:
+    restart: always
+    image: liam1803/ads_bing_build:v0.0.2
+    #command: python app.py
+    ports:
+      - "3500:5000"
+      - "3504:5004"
+      - "3501:5001"
+      - "3502:5002"
+    volumes:
+      - ./:/opt/mydata/
+    environment:
+      MYSQL_HOST: "10.10.200.52"
+

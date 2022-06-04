@@ -1,0 +1,13 @@
+FROM liam1803/alpine
+
+ARG tmp_api_version=default_value
+ENV API_VERSION=$tmp_api_version
+
+ADD dist/app /build/
+
+WORKDIR /build
+
+EXPOSE 5001
+EXPOSE 80
+
+CMD ["./app"]

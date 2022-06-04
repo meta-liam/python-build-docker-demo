@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  bing_app_dev:
+    #image: liam1803/api-app:0.01
+    image: liam1803/python_installer_ubuntu:0.0.2
+    # command: ["/bin/bash"]
+    ports:
+      - "6401:5001"
+    volumes:
+      - ./:/mydata/
+
+    environment:
+      MYSQL_HOST: "10.10.200.52"
+
